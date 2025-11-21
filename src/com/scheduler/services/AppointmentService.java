@@ -11,18 +11,16 @@ public class AppointmentService {
 
     public Appointment schedule(Client client, ServiceType service, LocalDateTime dateTime){
 
-        // Verificar se o horário já está ocupado
         for (Appointment ap : appointments) {
             if (ap.getDateTime().equals(dateTime)) {
-                return null; // horário já existe
+                return null;
             }
         }
 
-        // Criar novo agendamento
+
         int id = appointments.size() + 1;
         Appointment appointment = new Appointment(id, client, service, dateTime);
 
-        // ❗ AGORA SIM adicionamos o agendamento
         appointments.add(appointment);
 
         return appointment;

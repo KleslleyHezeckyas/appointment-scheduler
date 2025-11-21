@@ -18,7 +18,7 @@ public class ServiceCatalog {
         return services;
     }
 
-    public ServiceType findById(int id) { // nome corrigido
+    public ServiceType findById(int id) {
         for (ServiceType s : services) {
             if (s.getId() == id) return s;
         }

@@ -19,11 +19,10 @@ public class ClientService {
         return clients;
     }
 
-    // Método corrigido
     public Client findById(int id) {
         for (Client c : clients) {
             if (c.getId() == id) {
-                return c; // corrigido
+                return c;
             }
         }
         return null;
